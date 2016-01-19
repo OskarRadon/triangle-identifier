@@ -13,3 +13,21 @@ var triangle = function(sideOne, sideTwo, sideThree) {
       return "not a triangle";
     }
   };
+
+
+$(document).ready(function() {
+  $("form#triangle").submit(function(event) {
+
+    var sideOne = parseInt($("input#sideOne").val());
+    var sideTwo = parseInt($("input#sideTwo").val());
+    var sideThree = parseInt($("input#sideThree").val());
+    var result = triangle(sideOne, sideTwo, sideThree);
+
+    $("span#answer").text(result);
+    $("#output").show();
+
+
+console.log(result);
+    event.preventDefault();
+  });
+});
