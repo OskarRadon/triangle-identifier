@@ -1,18 +1,19 @@
 describe("triangle", function() {
-  // it("Not a triangle if the sum of two sides is less than or equal to the third", function(){
-  //   expect(triangle(2, 2, 5)).to.equal("not a triangle");
-  // });
 
-  it("is an equilateral triangle", function() {
-    expect(triangle(2, 2, 2)).to.equal("equilateral");
+  it("determines if three sides create a valid triangle", function(){
+    expect(triangle(2, 2, 8000)).to.equal("triangle");
   });
 
-  it("is an isosceles triangle", function() {
-    expect(triangle(2, 2, 4)).to.equal("isosceles");
+  it("determines if three sides make an equilateral triangle", function() {
+    expect(triangle(7, 7, 7)).to.equal("equilateral");
   });
 
-  it("is a scalene triangle", function() {
-    expect(triangle(1, 2, 3)).to.equal("scalene");
+  it("determines if three sides make an isosceles triangle", function() {
+    expect(triangle(7, 7, 4)).to.equal("isosceles");
+  });
+
+  it("determines if three sides make a scalene triangle", function() {
+    expect(triangle(2, 3, 4)).to.equal("scalene");
   });
 
 });
