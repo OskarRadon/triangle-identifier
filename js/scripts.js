@@ -4,7 +4,11 @@ var triangle = function(sideOne, sideTwo, sideThree) {
     if (sideOne === sideTwo && sideTwo === sideThree) {
     return "equilateral";
   } else if (sideOne === sideTwo || sideTwo === sideThree){
-    return "isosceles"
+    return "isosceles";
+  } else if (sideOne != sideTwo && sideTwo != sideThree && sideOne != sideThree) {
+    return "scalene";
+  // } else {
+  //   return "not a triangle"
   };
   // (sideOne === sideTwo {
   //   return "equilateral";
